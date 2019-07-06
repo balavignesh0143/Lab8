@@ -1,0 +1,25 @@
+package Lab8;
+
+import java.time.LocalDate;
+import java.time.Period;
+import java.util.Scanner;
+
+public class Exercise6 {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Day");
+		int day=sc.nextInt();
+		System.out.println("Month");
+		int month=sc.nextInt();
+		System.out.println("Year");
+		int year=sc.nextInt();
+		LocalDate l=LocalDate.of(year,month,day);
+		LocalDate l1=LocalDate.now();
+		Period p=Period.between(l,l1);
+		System.out.println("Date given by user: "+day+"."+month+"."+year);
+		System.out.println("Current Date: "+LocalDate.now());
+		System.out.println("Year: "+p.getDays()+" Month: "+p.getMonths()+" Date: "+p.getYears());
+		sc.close();
+	}
+
+}
